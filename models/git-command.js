@@ -11,9 +11,25 @@ class GitCommand {
 
     //Command: git status
     status(){        
-        /*
-            Create logic here and run unit testing.
-        */
+        let count = 0;
+        let message = '';
+        let path_file = '';
+        for (let index = 0; index < this.staging.length; index++) {
+            if (!this.staging[index]['location']) {
+                path_file = this.staging[index]['name'];
+            }
+            else {
+                path_file = this.staging[index]['location'] + '/' + this.staging[index]['name'];
+            }
+            if (message.length == 0) {
+                message += path_file;
+            }
+            else {
+                message += '\n' + path_file;
+            }
+            count++;
+        }
+        return `You have ${count} change/s.\n${message}`;
     }
 
     //Command: git add <filename/file directory/wildcard> 
