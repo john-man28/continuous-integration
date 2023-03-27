@@ -19,7 +19,7 @@ class GitCommand {
                 path_file = this.staging[index]['name'];
             }
             else {
-                path_file = this.staging[index]['location'] + '/' + this.staging[index]['name'];
+                path_file = `${this.staging[index]['location']}/${this.staging[index]['name']}`;
             }
             if (message.length == 0) {
                 message += path_file;
