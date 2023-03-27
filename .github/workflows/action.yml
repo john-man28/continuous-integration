@@ -22,3 +22,9 @@ jobs:
         run: npm install
       - name: Test project
         run: npm test
+      - name: Set status check
+        uses: github/status-check@v2
+        with:
+          status: ${{ job.status }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          context: Test
