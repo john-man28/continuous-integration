@@ -1,10 +1,14 @@
 name: Testing Git Commands
 on:
+  pull_request:
+    branches:
+      - master
+      - develop
   push:
     branches:
       - master
       - develop
-      - 'feature/**'
+      - "feature/**"
 jobs:
   build:
     name: Git Commands
