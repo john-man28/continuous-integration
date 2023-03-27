@@ -49,7 +49,7 @@ class GitCommand {
         else{
             return `Failed to add ${path_file}! File is not modified or missing.`;
         }
-        return "Successfully added as index file/s.";
+        //return "Successfully added as index file/s.";
     }
 
     //Command: git commit -m "<message>"
