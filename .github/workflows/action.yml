@@ -6,8 +6,6 @@ on:
       - develop
   push:
     branches:
-      - master
-      - develop
       - "feature/**"
 jobs:
   build:
